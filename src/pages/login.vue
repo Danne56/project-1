@@ -1,28 +1,30 @@
 <template>
-  <div>
-    <h1>Login Page</h1>
-    <div class="flex flex-col gap-2">
-      <input
-        type="text"
-        required
-        v-model="username"
-        class="border"
-        placeholder="Username"
-      />
-      <input
-        type="password"
-        required
-        v-model="password"
-        class="border"
-        placeholder="Password"
-      />
-      <button
-        @click="onLogin()"
-        :disabled="!isFormValid"
-        class="bg-blue-500 text-white py-1 px-3"
-      >
-        Login
-      </button>
+  <div class="flex items-center justify-center h-96">
+    <div class="bg-white p-8 rounded shadow-inner w-96">
+      <h1 class="text-2xl text-center font-semibold mb-4">Login Page</h1>
+      <div class="flex flex-col gap-4">
+        <input
+          type="text"
+          required
+          v-model="username"
+          class="border p-2 rounded"
+          placeholder="Username"
+        />
+        <input
+          type="password"
+          required
+          v-model="password"
+          class="border p-2 rounded"
+          placeholder="Password"
+        />
+        <button
+          @click="onLogin"
+          :disabled="!isFormValid"
+          class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
+        >
+          Login
+        </button>
+      </div>
     </div>
   </div>
 </template>
