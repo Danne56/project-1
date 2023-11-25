@@ -49,7 +49,6 @@ const onLogin = async () => {
   console.log(response)
 };
 
-/*
 // Check if both username and password are not empty
 const isFormValid = () => {
   return username.value.trim() !== "" && password.value.trim() !== "";
@@ -63,5 +62,4 @@ const isFormValid = () => {
     alert("Please enter username and password");
   }
 };
-*/
 </script>
