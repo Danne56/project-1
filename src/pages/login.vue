@@ -33,6 +33,7 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import { useAuthStore } from "@/stores/auth";
+import axios from "axios";
 
 const auth = useAuthStore();
 const username = ref("");
@@ -44,7 +45,6 @@ const isFormValid = () => {
   return username.value.trim() !== "" && password.value.trim() !== "";
 };
 
-const onLogin = () => {
   if (isFormValid()) {
     auth.login(username.value); // You may adjust this part according to your authentication logic
     router.push("/");
