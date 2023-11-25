@@ -40,6 +40,15 @@ const username = ref("");
 const password = ref("");
 const router = useRouter();
 
+const onLogin = async () => {
+  const response = await axios.post('http://localhost:3000/login', {
+    username: username.value,
+    password: password.value,
+  })
+
+  console.log(response)
+};
+
 // Check if both username and password are not empty
 const isFormValid = () => {
   return username.value.trim() !== "" && password.value.trim() !== "";
