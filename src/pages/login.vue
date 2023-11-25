@@ -18,7 +18,7 @@
           placeholder="Password"
         />
         <button
-          @click="onLogin"
+          @click="onLogin2"
           :disabled="!isFormValid"
           class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
         >
@@ -54,6 +54,7 @@ const isFormValid = () => {
   return username.value.trim() !== "" && password.value.trim() !== "";
 };
 
+const onLogin2 = () => {
   if (isFormValid()) {
     auth.login(username.value); // You may adjust this part according to your authentication logic
     router.push("/");
