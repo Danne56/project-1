@@ -18,8 +18,7 @@
           placeholder="Password"
         />
         <button
-          @click="onLogin2"
-          :disabled="!isFormValid"
+          @click="onLogin"
           class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
         >
           Login
@@ -41,26 +40,23 @@ const password = ref("");
 const router = useRouter();
 
 const onLogin = async () => {
-  const response = await axios.post('http://localhost:3000/login', {
-    username: username.value,
-    password: password.value,
-  })
+    try {
+      const response = await axios.post('http://localhost:3000/login', {
+        username: username.value,
+        password: password.value,
+      });
 
-  console.log(response)
-};
+      console.log(response)
 
-// Check if both username and password are not empty
-const isFormValid = () => {
-  return username.value.trim() !== "" && password.value.trim() !== "";
-};
-
-const onLogin2 = () => {
-  if (isFormValid()) {
-    auth.login(username.value); // You may adjust this part according to your authentication logic
-    router.push("/");
-  } else {
-    // Handle invalid login attempt, e.g., show an error message
-    alert("Please enter username and password");
-  }
-};
+      if (response.data.status === 'success') {
+        auth.login(username.value);
+        router.push('/');
+      } else {
+        window.alert('Username atau password salah');
+      }
+    } catch (error) {
+      console.error('Error during login:', error);
+      window.alert('Terjadi kesalahan saat melakukan login');
+    }
+  };
 </script>
