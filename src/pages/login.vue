@@ -1,27 +1,28 @@
 <template>
   <div class="flex items-center justify-center h-96">
-    <div class="bg-white p-8 rounded shadow-inner w-96">
-      <h1 class="text-2xl text-center font-semibold mb-4">Login Page</h1>
+    <div class="bg-white dark:bg-slate-800 p-8 rounded shadow-inner w-96">
+      <h1 class="text-slate-900 dark:text-white text-2xl font-semibold mb-1">Welcome Back!</h1>
+      <h3 class="text-slate-500 dark:text-slate-400 text mb-6">Please login with your account.</h3>
       <div class="flex flex-col gap-4">
         <input
           type="text"
           required
           v-model="username"
-          class="border p-2 rounded"
+          class="bg-white dark:bg-slate-900 border dark:border-none dark:focus:outline-none p-2"
           placeholder="Username"
         />
         <input
           type="password"
           required
           v-model="password"
-          class="border p-2 rounded"
+          class="bg-white dark:bg-slate-900 border dark:border-none dark:focus:outline-none p-2 rounded"
           placeholder="Password"
         />
         <button
           @click="onLogin"
-          class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700"
+          class="bg-blue-500 dark:bg-blue-400 text-white py-2 px-4 rounded font-semibold hover:bg-blue-700 dark:hover:bg-blue-500"
         >
-          Login
+          LOGIN
         </button>
       </div>
     </div>
