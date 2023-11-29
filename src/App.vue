@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col container mx-auto p-8 gap-10">
+  <div class="flex flex-col container mx-auto p-4 gap-10">
     <!--Header-->
     <div class="flex justify-between">
       <!--Menu-->

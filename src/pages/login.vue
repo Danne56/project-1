@@ -2,7 +2,7 @@
   <div class="flex items-center justify-center h-96">
     <div class="bg-white dark:bg-slate-800 p-8 rounded shadow-inner w-96">
       <h1 class="text-slate-900 dark:text-white text-2xl font-semibold mb-1">Welcome Back!</h1>
-      <h3 class="text-slate-500 dark:text-slate-400 text mb-6">Please login with your account.</h3>
+      <h3 class="text-slate-500 dark:text-slate-400 text mb-4">Please login with your account.</h3>
       <div class="flex flex-col gap-4">
         <input
           type="text"
